@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCode, FaLaptopCode, FaServer, FaMobile, FaDatabase, FaGithub, FaFigma } from 'react-icons/fa6';
-import pfp from '../assets/Image.jpg';
+import pfp from '../assets/image.jpg';
 
 const AboutMe = () => {
   const technologies = [
