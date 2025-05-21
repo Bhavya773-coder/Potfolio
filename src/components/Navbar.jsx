@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaDiscord } from 'react-icons/fa6';
 import { HiMenu, HiX } from 'react-icons/hi';
-import pfp from '../assets/Image.jpg';
+import pfp from '../assets/image.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
