@@ -61,7 +61,7 @@ const ContactMe = () => {
             <div>
               <h3 className="text-white font-bold">Email</h3>
               <a href="mailto:your.email@example.com" className="text-[#8892b0] hover:text-[#A495FD] transition-colors">
-                your.email@example.com
+                mashrubhavya5@gmail.com
               </a>
             </div>
           </div>
@@ -75,7 +75,7 @@ const ContactMe = () => {
             <div>
               <h3 className="text-white font-bold">Phone</h3>
               <a href="tel:+1234567890" className="text-[#8892b0] hover:text-[#A495FD] transition-colors">
-                +1 (234) 567-890
+                +91 7046673776
               </a>
             </div>
           </div>
@@ -88,7 +88,7 @@ const ContactMe = () => {
             </div>
             <div>
               <h3 className="text-white font-bold">Location</h3>
-              <p className="text-[#8892b0]">Your City, Country</p>
+              <p className="text-[#8892b0]">Jamnagar,India</p>
             </div>
           </div>
         </div>

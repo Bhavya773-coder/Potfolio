@@ -5,22 +5,22 @@ import pfp from '../assets/Image.jpg';
 const AboutMe = () => {
   const technologies = [
     { name: "Frontend", icon: <FaLaptopCode size={24} />, skills: ["React.js", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript"] },
-    { name: "Backend", icon: <FaServer size={24} />, skills: ["Node.js", "Express.js", "Python", "Java", "REST APIs"] },
-    { name: "Mobile", icon: <FaMobile size={24} />, skills: ["React Native", "Flutter", "Android", "iOS"] },
-    { name: "Database", icon: <FaDatabase size={24} />, skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"] },
-    { name: "Tools", icon: <FaGithub size={24} />, skills: ["Git", "Docker", "AWS", "Vercel", "Linux"] },
-    { name: "Design", icon: <FaFigma size={24} />, skills: ["Figma", "Adobe XD", "UI/UX", "Responsive Design"] },
+    { name: "Backend", icon: <FaServer size={24} />, skills: ["Node.js", "Express.js", "Python", ".Net", "REST APIs"] },
+    { name: "Mobile", icon: <FaMobile size={24} />, skills: [ "Flutter", "Android", "iOS"] },
+    { name: "Database", icon: <FaDatabase size={24} />, skills: ["MongoDB", "MySQL", "Firebase"] },
+    { name: "Tools", icon: <FaGithub size={24} />, skills: ["Git", "Docker", "AWS", "Vercel", "Unity"] },
+    { name: "Design", icon: <FaFigma size={24} />, skills: ["Figma", "UI/UX", "Responsive Design"] },
   ];
 
   const stats = [
-    { label: "Years Experience", value: "4+" },
-    { label: "Projects Completed", value: "50+" },
-    { label: "Happy Clients", value: "30+" },
-    { label: "Github Repos", value: "100+" },
+    { label: "Years Experience", value: "0" },
+    { label: "Projects Completed", value: "16+" },
+    { label: "Happy Clients", value: "0" },
+    { label: "Github Repos", value: "20+" },
   ];
 
   return (
-    <section id="About Me" className="py-20 max-h-screen item-center">
+    <section id="About Me" className="w-full min-h-[80vh] py-20 px-4 sm:px-8 md:px-16 lg:px-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-20">
@@ -33,14 +33,18 @@ const AboutMe = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
         <div className="relative">
   {/* Pulse effect */}
-  <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse blur-sm opacity-75"></div>
+  <div className="absolute -inset-2 bg-gradient-to-r from-[#5BA4FC] to-[#E975FF] rounded-full animate-pulse blur-sm opacity-75"></div>
   
   {/* Image container */}
-  <div className="relative rounded-full p-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+  <div className="relative rounded-full p-1 bg-gradient-to-r from-[#5BA4FC] to-[#E975FF]">
     <img 
       src={pfp} 
       alt="Profile" 
       className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full"
+      loading="lazy"
+      onError={(e) => {
+        e.target.src = 'fallback-image.png';
+      }}
     />
   </div>
 </div>
@@ -51,11 +55,11 @@ const AboutMe = () => {
               <h3 className="text-3xl font-bold text-white">
                 Hi, I'm <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">Bhavya</span>
               </h3>
-              <p className="text-xl text-gray-400">Full Stack Developer</p>
+              <p className="text-xl text-gray-400">AIML Developer</p>
               <p className="text-gray-400 leading-relaxed">
-                I'm a passionate Full Stack Developer with expertise in building modern web applications. 
-                I love turning complex problems into simple, beautiful, and intuitive solutions. 
-                When I'm not coding, you'll find me exploring new technologies or contributing to open-source projects.
+              I'm an enthusiastic AI/ML Developer and Game Developer, eager to dive into building intelligent systems and immersive gaming experiences. I enjoy solving challenging problems by applying machine learning algorithms and creating engaging, interactive games. When I'm not coding, you'll find me exploring new AI/ML techniques, working on personal game projects, or contributing to open-source communities.
+
+
               </p>
             </div>
 

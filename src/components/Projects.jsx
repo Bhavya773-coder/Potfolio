@@ -1,31 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import discordImage from '../assets/discord.png';
+import wagonImage from '../assets/8.webp';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = () => {
+  const [loadedImages, setLoadedImages] = useState({});
+
+  const handleImageLoad = (index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
+  };
+
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, cart functionality, and payment integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      github: "https://github.com/yourusername/ecommerce",
+      title: "Discord Colne",
+      description: "A fully Functional Clone of Discord with Realtime Chat and Voice Channels using Websockets and WebRTC.",
+      technologies: [ "Node.js", "MongoDB", "Express", "Tailwind CSS","Websockets","WebRTC"],
+      github: "https://github.com/Bhavya773-coder/DiscordClone",
       live: "https://your-ecommerce.com",
-      image: "/project1.jpg" // Add your project image path
+      image: discordImage // Add your project image path
     },
     {
-      title: "Social Media Dashboard",
-      description: "Real-time social media analytics dashboard with data visualization. Integrates with multiple social platforms and provides detailed insights and metrics.",
-      technologies: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS", "Chart.js"],
-      github: "https://github.com/yourusername/social-dashboard",
+      title: "Car Runner Game",
+      description: "A 3D Car Racing Game with Multiplayer Support and Realtime Leaderboard using Unity and Blender.",
+      technologies: ["Unity", "C#", "Blender"],
+      github: "https://github.com/Bhavya773-coder/Car-Runner",
       live: "https://your-dashboard.com",
-      image: "/project2.jpg"
+      image: wagonImage
     },
     {
-      title: "AI Chat Application",
-      description: "Real-time chat application with AI-powered responses. Features include message translation, sentiment analysis, and voice messages.",
-      technologies: ["React", "Python", "Socket.io", "TensorFlow", "WebRTC"],
-      github: "https://github.com/yourusername/ai-chat",
+      title: "AI Wegon Detection",
+      description: "A Realtime Object Detection System for Wegons using Own Models and OpenCV,Pytorch.",
+      technologies: ["Python", "Training Models", "OpenCV","Pytorch","Deep Learning","CNN"],
+      github: "https://github.com/Bhavya773-coder/Minded-JK-Lakshmi-Wegon-Detection",
       live: "https://your-chat-app.com",
-      image: "/project3.jpg"
+      image: wagonImage
     },
   ];
 
@@ -40,11 +48,18 @@ const Projects = () => {
           >
             {/* Project Image */}
             <div className="relative h-48 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#5BA4FC]/20 via-[#A495FD]/20 to-[#E975FF]/20 z-10" />
+              {!loadedImages[index] && (
+                <div className="absolute inset-0 bg-[#112240] animate-pulse" />
+              )}
               <img 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                onLoad={() => handleImageLoad(index)}
+                onError={(e) => {
+                  e.target.src = '/placeholder.png'; // Add a placeholder image
+                }}
               />
             </div>
 
@@ -79,14 +94,7 @@ const Projects = () => {
                 >
                   <FaGithub size={24} />
                 </a>
-                <a 
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#8892b0] hover:text-white transition-colors"
-                >
-                  <FaExternalLinkAlt size={22} />
-                </a>
+               
               </div>
             </div>
           </div>

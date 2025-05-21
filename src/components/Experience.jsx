@@ -1,42 +1,52 @@
 import React from 'react';
 import { FaGraduationCap, FaLaptopCode, FaCertificate, FaCode } from 'react-icons/fa';
+import resume from '../assets/potfolio-resume.png';
 
 const Experience = () => {
   const experiences = [
     {
-      title: "Web Development Intern",
-      company: "Tech Solutions Inc.",
-      duration: "3 months",
-      period: "Jun 2023 - Aug 2023",
+      title: "Diploma in Computer Science",
+      company: "Kalyan Polytechnic.",
+      duration: "3 Years",
+      period: "Jun 2020 - Aug 2023",
       description: [
-        "Developed and maintained responsive web applications using React.js and Node.js",
-        "Collaborated with senior developers to implement new features and fix bugs",
-        "Gained hands-on experience with Git version control and Agile methodologies"
+        "Developed 3d Car Runner Project using Unity and Blender",
+        "Collaborated with frontend and created a iot bluetooth car project",
+        "Gained hands-on experience with Git version control system"
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Git"]
+      technologies: ["Android", "Java", "SQL", "PHP", "HTML", "CSS"]
     },
     {
-      title: "Full Stack Development Training",
-      company: "CodeCamp Academy",
-      duration: "6 months",
-      period: "Jan 2023 - Jun 2023",
+      title: "BTech in Computer Science",
+      company: "Darshan University",
+      duration: "3 Years",
+      period: "Jan 2023 - Jun 2026",
       description: [
-        "Completed intensive full-stack development bootcamp",
-        "Built 5+ full-stack projects from scratch",
+        "Completed Discord Clone Project using Next.Js and MongoDB",
+        "Built 5+ AIML projects using Python ",
         "Learned modern web development technologies and best practices"
       ],
-      technologies: ["JavaScript", "React", "Node.js", "Express", "MongoDB"]
+      technologies: ["ML", "AI", "Python","Tensorflow","Keras","OpenCV","CNN"]
     }
   ];
 
   const relevantCourses = [
-    "Data Structures and Algorithms",
+    "Data Science with Python",
     "Web Development",
     "Database Management Systems",
     "Object-Oriented Programming",
-    "Software Engineering",
-    "Cloud Computing"
+    "Python Programming",
+    "Iot Development"
   ];
+
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = resume;
+    link.download = 'Bhavya_Resume.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="space-y-12">
@@ -89,9 +99,9 @@ const Experience = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="text-[#A495FD] mb-2">Frontend</h4>
+            <h4 className="text-[#A495FD] mb-2">Machine Lernining and Data Science</h4>
             <div className="flex flex-wrap gap-2">
-              {["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "Redux"].map((skill, index) => (
+              {["Classification","Clustering","Hyper Parameter Tuning","Data Cleaning","Feature Engineering"].map((skill, index) => (
                 <span key={index} className="px-3 py-1 text-sm text-[#8892b0] bg-[#A495FD]/10 rounded-full">
                   {skill}
                 </span>
@@ -99,9 +109,9 @@ const Experience = () => {
             </div>
           </div>
           <div>
-            <h4 className="text-[#A495FD] mb-2">Backend</h4>
+            <h4 className="text-[#A495FD] mb-2">Deep Lerning</h4>
             <div className="flex flex-wrap gap-2">
-              {["Node.js", "Express.js", "MongoDB", "SQL", "RESTful APIs", "Git"].map((skill, index) => (
+              {["CNN","RNN","TenserFlow","Keras","PyTorch"].map((skill, index) => (
                 <span key={index} className="px-3 py-1 text-sm text-[#8892b0] bg-[#A495FD]/10 rounded-full">
                   {skill}
                 </span>
@@ -115,7 +125,7 @@ const Experience = () => {
       <div className="bg-[#112240] rounded-xl p-6 border border-[#8892b0]/20">
         <div className="flex items-center gap-3 mb-6">
           <FaGraduationCap className="text-[#A495FD] text-2xl" />
-          <h3 className="text-xl font-bold text-white">Relevant Coursework</h3>
+          <h3 className="text-xl font-bold text-white">Most Preffered Techs</h3>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {relevantCourses.map((course, index) => (
@@ -132,14 +142,13 @@ const Experience = () => {
 
       {/* Call to Action */}
       <div className="text-center">
-        <a 
-          href="/resume.pdf" 
-          download
+        <button 
+          onClick={handleResumeDownload}
           className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#5BA4FC] via-[#A495FD] to-[#E975FF] rounded-full text-white hover:opacity-90 transition-all duration-300 hover:scale-105"
         >
           <FaCertificate size={20} />
           <span>Download Resume</span>
-        </a>
+        </button>
       </div>
     </div>
   );
