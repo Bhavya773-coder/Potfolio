@@ -26,7 +26,7 @@ const Projects = () => {
       technologies: ["Unity", "C#", "Blender"],
       github: "https://github.com/Bhavya773-coder/Car-Runner",
       live: "https://your-dashboard.com",
-      image: wagonImage
+      image: gameImage
     },
     {
       title: "AI Wegon Detection",
@@ -34,7 +34,7 @@ const Projects = () => {
       technologies: ["Python", "Training Models", "OpenCV","Pytorch","Deep Learning","CNN"],
       github: "https://github.com/Bhavya773-coder/Minded-JK-Lakshmi-Wegon-Detection",
       live: "https://your-chat-app.com",
-      image: gameImage
+      image: wagonImage
     },
   ];
 
