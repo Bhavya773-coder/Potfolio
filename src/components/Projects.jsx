@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import discordImage from '../assets/discord.png';
 import wagonImage from '../assets/8.webp';
+import gameImage from '../assets/image.png';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = () => {
@@ -33,7 +34,7 @@ const Projects = () => {
       technologies: ["Python", "Training Models", "OpenCV","Pytorch","Deep Learning","CNN"],
       github: "https://github.com/Bhavya773-coder/Minded-JK-Lakshmi-Wegon-Detection",
       live: "https://your-chat-app.com",
-      image: wagonImage
+      image: gameImage
     },
   ];
 
