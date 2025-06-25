@@ -13,7 +13,7 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Discord Colne",
+      title: "Discord Clone",
       description: "A fully Functional Clone of Discord with Realtime Chat and Voice Channels using Websockets and WebRTC.",
       technologies: [ "Node.js", "MongoDB", "Express", "Tailwind CSS","Websockets","WebRTC"],
       github: "https://github.com/Bhavya773-coder/DiscordClone",
