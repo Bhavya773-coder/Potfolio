@@ -20,7 +20,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <section id="About Me" className="w-full min-h-[80vh] py-20 px-4 sm:px-8 md:px-16 lg:px-24">
+    <section className="w-full min-h-[80vh] py-20 px-4 sm:px-8 md:px-16 lg:px-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-20">

@@ -43,15 +43,6 @@ const Certificates = () => {
     }
   ];
 
-  const achievements = [
-    "Hackathon Participant - TechFest 2023",
-    "Coding Competition Finalist",
-    "Open Source Contributor",
-    "Web Development Workshop Leader",
-    "Technical Blog Writer",
-    "Community Mentor"
-  ];
-
   return (
     <div className="space-y-12">
       {/* Certificates Grid */}
